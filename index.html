@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Israt Jahan Chandmoni | Data Analyst</title>
 
   <meta
     name="description"
-    content="Portfolio of Israt Jahan Chandmoni - Data Analyst specializing in Power BI, SQL, Python, dashboards and business analytics."
+    content="Portfolio of Israt Jahan Chandmoni - Data Analyst specializing in Power BI, SQL, Python, dashboards, reporting and business analytics."
   >
 
   <style>
@@ -59,11 +62,12 @@
     ========================== */
 
     nav {
-      background: white;
+      background: rgba(255, 255, 255, 0.95);
       position: sticky;
       top: 0;
       z-index: 1000;
       border-bottom: 1px solid #e2e8f0;
+      backdrop-filter: blur(10px);
     }
 
     .nav-container {
@@ -108,13 +112,14 @@
       min-height: 88vh;
       display: flex;
       align-items: center;
+
       background:
         radial-gradient(circle at top right, #dbeafe, transparent 35%),
         linear-gradient(135deg, #ffffff, #f8fafc);
     }
 
     .hero-content {
-      max-width: 800px;
+      max-width: 850px;
     }
 
     .small-title {
@@ -123,7 +128,7 @@
       font-weight: bold;
       font-size: 15px;
       margin-bottom: 18px;
-      letter-spacing: 1px;
+      letter-spacing: 1.3px;
     }
 
     .hero h1 {
@@ -147,7 +152,7 @@
     .hero-description {
       font-size: 18px;
       color: #64748b;
-      max-width: 700px;
+      max-width: 720px;
       margin-bottom: 35px;
     }
 
@@ -185,6 +190,90 @@
     .btn-secondary:hover {
       border-color: #2563eb;
       color: #2563eb;
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       UPWORK CREDIBILITY
+    ========================== */
+
+    .credibility {
+      background: #ffffff;
+      padding: 70px 0;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .credibility-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .upwork-image-wrapper {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 15px;
+      border-radius: 18px;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.07);
+    }
+
+    .upwork-image-wrapper img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .credibility-label {
+      display: inline-block;
+      color: #2563eb;
+      background: #eff6ff;
+      padding: 7px 13px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.6px;
+      margin-bottom: 15px;
+    }
+
+    .credibility-content h2 {
+      margin-bottom: 18px;
+      font-size: 38px;
+    }
+
+    .credibility-content p {
+      color: #64748b;
+      font-size: 17px;
+      margin-bottom: 22px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .stat-card {
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      padding: 20px 15px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 22px;
+      color: #0f172a;
+      margin-bottom: 3px;
+    }
+
+    .stat-card span {
+      font-size: 13px;
+      color: #64748b;
     }
 
 
@@ -193,7 +282,7 @@
     ========================== */
 
     .about {
-      background: white;
+      background: #f8fafc;
     }
 
     .about-grid {
@@ -229,6 +318,10 @@
     /* =========================
        SKILLS
     ========================== */
+
+    #skills {
+      background: #ffffff;
+    }
 
     .skills-grid {
       display: grid;
@@ -266,7 +359,7 @@
     ========================== */
 
     .projects {
-      background: white;
+      background: #f8fafc;
     }
 
     .projects-grid {
@@ -344,6 +437,7 @@
     ========================== */
 
     .contact {
+      background: white;
       text-align: center;
     }
 
@@ -360,7 +454,7 @@
 
     .contact-box p {
       color: #cbd5e1;
-      max-width: 600px;
+      max-width: 620px;
       margin: 15px auto 30px;
     }
 
@@ -382,6 +476,7 @@
       color: #64748b;
       font-size: 14px;
       border-top: 1px solid #e2e8f0;
+      background: white;
     }
 
 
@@ -393,6 +488,10 @@
 
       .hero h1 {
         font-size: 48px;
+      }
+
+      .credibility-grid {
+        grid-template-columns: 1fr;
       }
 
       .skills-grid {
@@ -408,10 +507,16 @@
       }
     }
 
+
     @media(max-width: 650px) {
 
       .nav-links {
         display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 90px 0;
       }
 
       .hero h1 {
@@ -420,6 +525,14 @@
 
       .hero-subtitle {
         font-size: 20px;
+      }
+
+      .credibility-content h2 {
+        font-size: 31px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
       }
 
       .skills-grid,
@@ -433,6 +546,7 @@
     }
 
   </style>
+
 </head>
 
 
@@ -485,7 +599,7 @@
       </h1>
 
       <div class="hero-subtitle">
-        Data Analyst | Power BI | SQL | Python
+        Freelance BI Analyst | Data Analyst | Power BI | SQL | Python | Tableau | Looker Studio
       </div>
 
       <p class="hero-description">
@@ -502,6 +616,104 @@
         <a href="#contact" class="btn btn-secondary">
           Contact Me
         </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     UPWORK CREDIBILITY
+========================== -->
+
+<section class="credibility">
+
+  <div class="container">
+
+    <div class="credibility-grid">
+
+
+      <!-- UPWORK IMAGE -->
+
+      <div class="upwork-image-wrapper">
+
+        <img
+          src="upwork-profile.jpg"
+          alt="Israt Jahan Chandmoni Upwork Top Rated Profile"
+        >
+
+      </div>
+
+
+
+      <!-- UPWORK DESCRIPTION -->
+
+      <div class="credibility-content">
+
+        <span class="credibility-label">
+          PROFESSIONAL EXPERIENCE
+        </span>
+
+        <h2>
+          🏆 Upwork Top Rated
+        </h2>
+
+        <p>
+          With 4 years of experience in data analytics, I help businesses
+          transform raw data into meaningful insights and better decisions.
+          I specialize in Power BI dashboards, SQL reporting, sales analysis,
+          inventory analytics, data cleaning and visualization.
+        </p>
+
+
+        <div class="stats">
+
+          <div class="stat-card">
+
+            <strong>100%</strong>
+
+            <span>Job Success</span>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <strong>Top Rated</strong>
+
+            <span>Upwork Status</span>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <strong>4 Years</strong>
+
+            <span>Experience</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- ADD YOUR UPWORK PROFILE LINK HERE LATER -->
+
+        <!--
+        <a
+          href="YOUR-UPWORK-PROFILE-URL"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          View My Upwork Profile
+        </a>
+        -->
 
       </div>
 
@@ -552,10 +764,15 @@
         <h3>What I Work On</h3>
 
         <p>✓ Business Intelligence Dashboards</p>
+
         <p>✓ Sales Performance Analysis</p>
+
         <p>✓ Inventory Analysis</p>
+
         <p>✓ SQL Reporting</p>
+
         <p>✓ Data Cleaning & Transformation</p>
+
         <p>✓ Data Visualization</p>
 
       </div>
@@ -682,7 +899,9 @@
           <div class="tags">
 
             <span class="tag">Power BI</span>
+
             <span class="tag">Dashboard</span>
+
             <span class="tag">Data Analysis</span>
 
           </div>
@@ -717,7 +936,9 @@
           <div class="tags">
 
             <span class="tag">Power BI</span>
+
             <span class="tag">Inventory</span>
+
             <span class="tag">Analytics</span>
 
           </div>
@@ -752,7 +973,9 @@
           <div class="tags">
 
             <span class="tag">SQL</span>
+
             <span class="tag">Reporting</span>
+
             <span class="tag">Business Analysis</span>
 
           </div>
@@ -788,10 +1011,13 @@
 
       <p>
         I'm always interested in opportunities to work on
-        data analysis, business intelligence and dashboard projects.
+        data analysis, business intelligence, and dashboard projects.
       </p>
 
       <div class="contact-links">
+
+
+        <!-- EMAIL -->
 
         <a
           href="mailto:isratjahanchandmoni@gmail.com"
@@ -799,6 +1025,9 @@
         >
           Email Me
         </a>
+
+
+        <!-- LINKEDIN -->
 
         <a
           href="https://www.linkedin.com/in/israt-jahan-chandmoni/"
@@ -809,6 +1038,9 @@
           LinkedIn
         </a>
 
+
+        <!-- YOUTUBE -->
+
         <a
           href="https://www.youtube.com/@IsratJahanChandmoni/videos"
           target="_blank"
@@ -818,6 +1050,9 @@
           YouTube
         </a>
 
+
+        <!-- GITHUB -->
+
         <a
           href="https://github.com/isratjahanchandmoni"
           target="_blank"
@@ -826,6 +1061,7 @@
         >
           GitHub
         </a>
+
 
       </div>
 
@@ -850,4 +1086,5 @@
 
 
 </body>
+
 </html>
