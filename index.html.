@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Israt Jahan | Data Analyst</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    h1 { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <h1>Israt Jahan Chandmoni</h1>
+  <p><b>Data Analyst | Power BI | SQL | Python</b></p>
+
+  <h2>About Me</h2>
+  <p>I create business dashboards, sales analysis reports, inventory insights, and data visualizations using Power BI and SQL.</p>
+
+  <h2>Projects</h2>
+  <ul>
+    <li>Power BI Sales Dashboard</li>
+    <li>Inventory & Dead Stock Analysis</li>
+    <li>SQL Business Reporting</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>LinkedIn | Upwork | Email</p>
+</body>
+</html>
