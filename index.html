@@ -11,7 +11,7 @@
 
   <meta
     name="description"
-    content="Portfolio of Israt Jahan Chandmoni - Data Analyst specializing in Power BI, SQL, Python, dashboards, reporting and business analytics."
+    content="Portfolio of Israt Jahan Chandmoni - Freelance BI Analyst and Data Analyst specializing in Power BI, SQL, Python, Tableau, Looker Studio, dashboards, reporting and business analytics."
   >
 
   <style>
@@ -119,7 +119,7 @@
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 900px;
     }
 
     .small-title {
@@ -143,7 +143,7 @@
     }
 
     .hero-subtitle {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 600;
       margin-bottom: 18px;
       color: #334155;
@@ -366,6 +366,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 28px;
+      align-items: start;
     }
 
     .project-card {
@@ -382,7 +383,7 @@
     }
 
     .project-image {
-      height: 200px;
+      height: 220px;
       background: linear-gradient(135deg, #2563eb, #60a5fa);
       display: flex;
       align-items: center;
@@ -392,6 +393,20 @@
       font-weight: bold;
       text-align: center;
       padding: 20px;
+      overflow: hidden;
+    }
+
+    .project-image.has-image {
+      background: #f8fafc;
+      padding: 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .project-image.has-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .project-content {
@@ -401,12 +416,41 @@
     .project-content h3 {
       margin-bottom: 12px;
       color: #0f172a;
+      font-size: 21px;
     }
 
     .project-content p {
       color: #64748b;
       font-size: 15px;
       margin-bottom: 18px;
+    }
+
+    .project-business-value {
+      background: #f8fafc;
+      border-left: 3px solid #2563eb;
+      padding: 14px 16px;
+      margin: 18px 0;
+      border-radius: 6px;
+    }
+
+    .project-business-value strong {
+      display: block;
+      color: #0f172a;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .project-business-value p {
+      margin: 0;
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    .tools-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 10px;
     }
 
     .tags {
@@ -429,6 +473,10 @@
       color: #2563eb;
       text-decoration: none;
       font-weight: 600;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
     }
 
 
@@ -524,7 +572,7 @@
       }
 
       .hero-subtitle {
-        font-size: 20px;
+        font-size: 19px;
       }
 
       .credibility-content h2 {
@@ -542,6 +590,10 @@
 
       section {
         padding: 65px 0;
+      }
+
+      .project-image {
+        height: 200px;
       }
     }
 
@@ -638,8 +690,6 @@
     <div class="credibility-grid">
 
 
-      <!-- UPWORK IMAGE -->
-
       <div class="upwork-image-wrapper">
 
         <img
@@ -649,9 +699,6 @@
 
       </div>
 
-
-
-      <!-- UPWORK DESCRIPTION -->
 
       <div class="credibility-content">
 
@@ -701,20 +748,6 @@
 
         </div>
 
-
-        <!-- ADD YOUR UPWORK PROFILE LINK HERE LATER -->
-
-        <!--
-        <a
-          href="YOUR-UPWORK-PROFILE-URL"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-primary"
-        >
-          View My Upwork Profile
-        </a>
-        -->
-
       </div>
 
     </div>
@@ -747,7 +780,7 @@
         <p>
           I create business dashboards, sales analysis reports,
           inventory insights and data visualizations using tools
-          such as Power BI, SQL and Python.
+          such as Power BI, SQL, Python, Tableau and Looker Studio.
         </p>
 
         <p>
@@ -810,7 +843,7 @@
 
         <p>
           Interactive dashboards, data modeling,
-          Power Query and business reporting.
+          Power Query, DAX and business reporting.
         </p>
 
       </div>
@@ -845,8 +878,8 @@
         <h3>Data Visualization</h3>
 
         <p>
-          Turning complex information into
-          clear and actionable visual insights.
+          Power BI, Tableau and Looker Studio
+          dashboards for clear business insights.
         </p>
 
       </div>
@@ -879,36 +912,69 @@
     <div class="projects-grid">
 
 
-      <!-- PROJECT 1 -->
+      <!-- =========================
+           PROJECT 1
+           SHOPIFY E-COM DASHBOARD
+      ========================== -->
 
       <div class="project-card">
 
-        <div class="project-image">
-          Sales Dashboard
+        <div class="project-image has-image">
+
+          <img
+            src="Shopify E-com Dashboard.png"
+            alt="Shopify E-commerce Power BI Dashboard by Israt Jahan Chandmoni"
+          >
+
         </div>
+
 
         <div class="project-content">
 
-          <h3>Power BI Sales Dashboard</h3>
+          <h3>Shopify E-com Dashboard</h3>
 
           <p>
-            Interactive sales performance dashboard designed to
-            track revenue, trends, products and business performance.
+            This Power BI dashboard provides an overview of Shopify
+            e-commerce performance, helping business owners monitor sales,
+            profitability, customer behavior, product performance,
+            shipping methods and refunds in one place.
           </p>
 
-          <div class="tags">
 
-            <span class="tag">Power BI</span>
+          <div class="project-business-value">
 
-            <span class="tag">Dashboard</span>
+            <strong>Business Value</strong>
 
-            <span class="tag">Data Analysis</span>
+            <p>
+              This dashboard helps e-commerce businesses identify sales trends,
+              monitor profitability, understand customer purchasing behavior,
+              evaluate product demand, track refunds and make data-driven
+              decisions to improve overall business performance.
+            </p>
 
           </div>
 
-          <a href="#" class="project-link">
-            View Project →
-          </a>
+
+          <div class="tools-title">
+            Tools & Technologies
+          </div>
+
+
+          <div class="tags">
+
+            <span class="tag">Shopify API</span>
+
+            <span class="tag">Google Sheets</span>
+
+            <span class="tag">Microsoft Power BI</span>
+
+            <span class="tag">Power Query</span>
+
+            <span class="tag">Data Modeling</span>
+
+            <span class="tag">E-commerce Analytics</span>
+
+          </div>
 
         </div>
 
@@ -916,7 +982,10 @@
 
 
 
-      <!-- PROJECT 2 -->
+      <!-- =========================
+           PROJECT 2
+           PLACEHOLDER
+      ========================== -->
 
       <div class="project-card">
 
@@ -953,7 +1022,10 @@
 
 
 
-      <!-- PROJECT 3 -->
+      <!-- =========================
+           PROJECT 3
+           PLACEHOLDER
+      ========================== -->
 
       <div class="project-card">
 
@@ -1011,13 +1083,11 @@
 
       <p>
         I'm always interested in opportunities to work on
-        data analysis, business intelligence, and dashboard projects.
+        data analysis, business intelligence and dashboard projects.
       </p>
 
       <div class="contact-links">
 
-
-        <!-- EMAIL -->
 
         <a
           href="mailto:isratjahanchandmoni@gmail.com"
@@ -1026,8 +1096,6 @@
           Email Me
         </a>
 
-
-        <!-- LINKEDIN -->
 
         <a
           href="https://www.linkedin.com/in/israt-jahan-chandmoni/"
@@ -1039,8 +1107,6 @@
         </a>
 
 
-        <!-- YOUTUBE -->
-
         <a
           href="https://www.youtube.com/@IsratJahanChandmoni/videos"
           target="_blank"
@@ -1050,8 +1116,6 @@
           YouTube
         </a>
 
-
-        <!-- GITHUB -->
 
         <a
           href="https://github.com/isratjahanchandmoni"
