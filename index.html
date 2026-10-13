@@ -5,7 +5,10 @@
 
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Israt Jahan Chandmoni | Data Analyst</title>
 
@@ -14,11 +17,12 @@
     content="Portfolio of Israt Jahan Chandmoni - Freelance BI Analyst and Data Analyst specializing in Power BI, SQL, Python, Tableau, Looker Studio, dashboards, reporting and business analytics."
   >
 
+
   <style>
 
-    /* =========================
+    /* ==================================================
        GENERAL
-    ========================== */
+    ================================================== */
 
     * {
       margin: 0;
@@ -27,11 +31,19 @@
       scroll-behavior: smooth;
     }
 
+    html {
+      scroll-padding-top: 80px;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f8fafc;
       color: #1e293b;
       line-height: 1.6;
+    }
+
+    body.modal-open {
+      overflow: hidden;
     }
 
     .container {
@@ -52,17 +64,18 @@
 
     .section-description {
       color: #64748b;
-      max-width: 650px;
+      max-width: 700px;
       margin-bottom: 45px;
     }
 
 
-    /* =========================
+
+    /* ==================================================
        NAVIGATION
-    ========================== */
+    ================================================== */
 
     nav {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255,255,255,0.96);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -75,13 +88,13 @@
       margin: auto;
       padding: 18px 5%;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
       font-size: 21px;
-      font-weight: bold;
+      font-weight: 700;
       color: #2563eb;
       text-decoration: none;
     }
@@ -96,7 +109,7 @@
       color: #475569;
       font-size: 15px;
       font-weight: 600;
-      transition: 0.3s;
+      transition: 0.2s;
     }
 
     .nav-links a:hover {
@@ -104,9 +117,10 @@
     }
 
 
-    /* =========================
+
+    /* ==================================================
        HERO
-    ========================== */
+    ================================================== */
 
     .hero {
       min-height: 88vh;
@@ -118,17 +132,25 @@
         linear-gradient(135deg, #ffffff, #f8fafc);
     }
 
+    .hero-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 70px;
+      align-items: center;
+    }
+
     .hero-content {
-      max-width: 900px;
+      max-width: 760px;
     }
 
     .small-title {
       display: inline-block;
       color: #2563eb;
-      font-weight: bold;
       font-size: 15px;
-      margin-bottom: 18px;
+      font-weight: 700;
       letter-spacing: 1.3px;
+      margin-bottom: 18px;
     }
 
     .hero h1 {
@@ -145,8 +167,8 @@
     .hero-subtitle {
       font-size: 22px;
       font-weight: 600;
-      margin-bottom: 18px;
       color: #334155;
+      margin-bottom: 18px;
     }
 
     .hero-description {
@@ -156,10 +178,99 @@
       margin-bottom: 35px;
     }
 
+
+
+    /* ==================================================
+       HERO PROFILE IMAGE
+    ================================================== */
+
+    .hero-profile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .profile-frame {
+      width: 100%;
+      max-width: 390px;
+      aspect-ratio: 4 / 5;
+
+      padding: 10px;
+
+      background:
+        linear-gradient(135deg, #dbeafe, #ffffff);
+
+      border: 1px solid #dbeafe;
+      border-radius: 30px;
+
+      box-shadow:
+        0 25px 60px rgba(37, 99, 235, 0.15);
+
+      position: relative;
+    }
+
+    .profile-frame::before {
+      content: "";
+      position: absolute;
+
+      width: 120px;
+      height: 120px;
+
+      background: #2563eb;
+      opacity: 0.08;
+
+      border-radius: 50%;
+
+      top: -35px;
+      right: -35px;
+
+      z-index: 0;
+    }
+
+    .profile-frame::after {
+      content: "";
+      position: absolute;
+
+      width: 90px;
+      height: 90px;
+
+      background: #60a5fa;
+      opacity: 0.10;
+
+      border-radius: 50%;
+
+      bottom: -25px;
+      left: -30px;
+
+      z-index: 0;
+    }
+
+    .profile-frame img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center top;
+
+      border-radius: 22px;
+
+      display: block;
+
+      position: relative;
+      z-index: 1;
+    }
+
+
+
+    /* ==================================================
+       BUTTONS
+    ================================================== */
+
     .buttons {
       display: flex;
-      gap: 15px;
       flex-wrap: wrap;
+      gap: 15px;
     }
 
     .btn {
@@ -167,8 +278,11 @@
       padding: 13px 25px;
       border-radius: 8px;
       text-decoration: none;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
       font-weight: 600;
-      transition: 0.3s;
+      transition: 0.25s;
     }
 
     .btn-primary {
@@ -182,24 +296,25 @@
     }
 
     .btn-secondary {
-      border: 1px solid #cbd5e1;
-      color: #334155;
       background: white;
+      color: #334155;
+      border: 1px solid #cbd5e1;
     }
 
     .btn-secondary:hover {
-      border-color: #2563eb;
       color: #2563eb;
+      border-color: #2563eb;
       transform: translateY(-2px);
     }
 
 
-    /* =========================
-       UPWORK CREDIBILITY
-    ========================== */
+
+    /* ==================================================
+       UPWORK
+    ================================================== */
 
     .credibility {
-      background: #ffffff;
+      background: white;
       padding: 70px 0;
       border-top: 1px solid #e2e8f0;
       border-bottom: 1px solid #e2e8f0;
@@ -217,7 +332,7 @@
       border: 1px solid #e2e8f0;
       padding: 15px;
       border-radius: 18px;
-      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.07);
+      box-shadow: 0 12px 35px rgba(15,23,42,0.07);
     }
 
     .upwork-image-wrapper img {
@@ -228,39 +343,39 @@
 
     .credibility-label {
       display: inline-block;
-      color: #2563eb;
       background: #eff6ff;
+      color: #2563eb;
       padding: 7px 13px;
       border-radius: 30px;
       font-size: 13px;
-      font-weight: bold;
+      font-weight: 700;
       letter-spacing: 0.6px;
       margin-bottom: 15px;
     }
 
     .credibility-content h2 {
-      margin-bottom: 18px;
       font-size: 38px;
+      margin-bottom: 18px;
     }
 
     .credibility-content p {
-      color: #64748b;
       font-size: 17px;
+      color: #64748b;
       margin-bottom: 22px;
     }
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 15px;
       margin: 30px 0;
     }
 
     .stat-card {
-      border: 1px solid #e2e8f0;
       background: #f8fafc;
-      padding: 20px 15px;
+      border: 1px solid #e2e8f0;
       border-radius: 12px;
+      padding: 20px 15px;
       text-align: center;
     }
 
@@ -268,18 +383,18 @@
       display: block;
       font-size: 22px;
       color: #0f172a;
-      margin-bottom: 3px;
     }
 
     .stat-card span {
-      font-size: 13px;
       color: #64748b;
+      font-size: 13px;
     }
 
 
-    /* =========================
+
+    /* ==================================================
        ABOUT
-    ========================== */
+    ================================================== */
 
     .about {
       background: #f8fafc;
@@ -294,8 +409,8 @@
 
     .about-text p {
       color: #64748b;
-      margin-bottom: 18px;
       font-size: 17px;
+      margin-bottom: 18px;
     }
 
     .about-box {
@@ -306,35 +421,35 @@
 
     .about-box h3 {
       margin-bottom: 20px;
-      color: #0f172a;
     }
 
     .about-box p {
-      margin: 10px 0;
       color: #475569;
+      margin: 10px 0;
     }
 
 
-    /* =========================
+
+    /* ==================================================
        SKILLS
-    ========================== */
+    ================================================== */
 
     #skills {
-      background: #ffffff;
+      background: white;
     }
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4,1fr);
       gap: 20px;
     }
 
     .skill-card {
       background: white;
       border: 1px solid #e2e8f0;
-      padding: 25px;
       border-radius: 12px;
-      transition: 0.3s;
+      padding: 25px;
+      transition: 0.25s;
     }
 
     .skill-card:hover {
@@ -344,19 +459,20 @@
     }
 
     .skill-card h3 {
-      margin-bottom: 8px;
       color: #0f172a;
+      margin-bottom: 8px;
     }
 
     .skill-card p {
-      font-size: 14px;
       color: #64748b;
+      font-size: 14px;
     }
 
 
-    /* =========================
-       PROJECTS
-    ========================== */
+
+    /* ==================================================
+       PROJECT GALLERY
+    ================================================== */
 
     .projects {
       background: #f8fafc;
@@ -364,135 +480,584 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      align-items: start;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+      gap: 26px;
+
+      align-items: stretch;
     }
 
     .project-card {
-      border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      overflow: hidden;
       background: white;
-      transition: 0.3s;
+
+      border: 1px solid #e2e8f0;
+
+      border-radius: 16px;
+
+      overflow: hidden;
+
+      display: flex;
+
+      flex-direction: column;
+
+      min-width: 0;
+
+      height: 100%;
+
+      transition: 0.25s;
     }
 
     .project-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      transform: translateY(-6px);
+
+      box-shadow:
+        0 16px 35px rgba(15,23,42,0.09);
+
+      border-color: #bfdbfe;
     }
 
-    .project-image {
-      height: 220px;
-      background: linear-gradient(135deg, #2563eb, #60a5fa);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 22px;
-      font-weight: bold;
-      text-align: center;
-      padding: 20px;
+
+
+    /* GALLERY THUMBNAIL */
+
+    .project-thumb {
+      width: 100%;
+
+      aspect-ratio: 16 / 10;
+
+      background: white;
+
       overflow: hidden;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-decoration: none;
+
+      border-bottom:
+        1px solid #e2e8f0;
     }
 
-    .project-image.has-image {
-      background: #f8fafc;
-      padding: 0;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .project-image.has-image img {
+    .project-thumb img {
       width: 100%;
       height: 100%;
+
       object-fit: contain;
+
       display: block;
+
+      transition: 0.3s;
     }
 
-    .project-content {
+    .project-card:hover
+    .project-thumb img {
+      transform: scale(1.025);
+    }
+
+
+
+    /* SQL COVER */
+
+    .sql-cover {
+      background:
+        linear-gradient(
+          135deg,
+          #fff3b0,
+          #ffd166
+        );
+
       padding: 25px;
+
+      text-align: center;
+
+      color: #9a3412;
+
+      flex-direction: column;
     }
 
-    .project-content h3 {
-      margin-bottom: 12px;
+    .sql-cover span {
+      font-size: 12px;
+
+      font-weight: 800;
+
+      letter-spacing: 1.5px;
+
+      margin-bottom: 8px;
+    }
+
+    .sql-cover strong {
+      font-size: 23px;
+
+      line-height: 1.2;
+
+      max-width: 230px;
+    }
+
+    .sql-cover small {
+      margin-top: 12px;
+
+      color: #92400e;
+
+      font-weight: 600;
+    }
+
+
+
+    /* PROJECT CONTENT */
+
+    .project-card-content {
+      padding: 22px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      flex: 1;
+    }
+
+    .project-card h3 {
+      font-size: 20px;
+
+      line-height: 1.35;
+
       color: #0f172a;
-      font-size: 21px;
-    }
 
-    .project-content p {
-      color: #64748b;
-      font-size: 15px;
-      margin-bottom: 18px;
-    }
-
-    .project-business-value {
-      background: #f8fafc;
-      border-left: 3px solid #2563eb;
-      padding: 14px 16px;
-      margin: 18px 0;
-      border-radius: 6px;
-    }
-
-    .project-business-value strong {
-      display: block;
-      color: #0f172a;
-      margin-bottom: 6px;
-      font-size: 14px;
-    }
-
-    .project-business-value p {
-      margin: 0;
-      font-size: 14px;
-      color: #64748b;
-    }
-
-    .tools-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #0f172a;
       margin-bottom: 10px;
     }
 
-    .tags {
+
+
+    /* 2 LINE DESCRIPTION */
+
+    .project-summary {
+      color: #64748b;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+      display: -webkit-box;
+
+      -webkit-line-clamp: 2;
+
+      -webkit-box-orient: vertical;
+
+      overflow: hidden;
+
+      min-height: 45px;
+
+      margin-bottom: 15px;
+    }
+
+
+
+    /* TAGS */
+
+    .gallery-tags {
       display: flex;
-      gap: 8px;
+
       flex-wrap: wrap;
+
+      gap: 6px;
+
       margin-bottom: 20px;
     }
 
     .tag {
-      padding: 5px 10px;
+      display: inline-block;
+
       background: #eff6ff;
+
       color: #2563eb;
+
+      padding: 5px 9px;
+
       border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
+
+      font-size: 11px;
+
+      font-weight: 700;
     }
 
-    .project-link {
-      color: #2563eb;
+
+
+    /* VIEW PROJECT BUTTON */
+
+    .project-button {
+      display: block;
+
+      width: 100%;
+
+      text-align: center;
+
+      background: #2563eb;
+
+      color: white;
+
+      padding: 11px 14px;
+
+      border-radius: 8px;
+
       text-decoration: none;
-      font-weight: 600;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      margin-top: auto;
+
+      transition: 0.2s;
     }
 
-    .project-link:hover {
-      text-decoration: underline;
+    .project-button:hover {
+      background: #1d4ed8;
     }
 
 
-    /* =========================
+
+    /* ==================================================
+       PROJECT MODAL
+    ================================================== */
+
+    .project-modal {
+      position: fixed;
+
+      inset: 0;
+
+      background:
+        rgba(15,23,42,0.78);
+
+      z-index: 5000;
+
+      display: none;
+
+      padding: 30px;
+
+      overflow-y: auto;
+    }
+
+    .project-modal.active {
+      display: block;
+    }
+
+    .modal-dialog {
+      width: 100%;
+
+      max-width: 1050px;
+
+      margin: 20px auto;
+
+      background: white;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,0.3);
+
+      overflow: hidden;
+
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+
+      top: 15px;
+
+      right: 15px;
+
+      z-index: 20;
+
+      width: 42px;
+
+      height: 42px;
+
+      border: none;
+
+      border-radius: 50%;
+
+      background: #0f172a;
+
+      color: white;
+
+      cursor: pointer;
+
+      font-size: 20px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+    }
+
+    .modal-close:hover {
+      background: #2563eb;
+    }
+
+    .modal-content {
+      padding: 35px;
+    }
+
+    .modal-project-label {
+      display: inline-block;
+
+      color: #2563eb;
+
+      background: #eff6ff;
+
+      border-radius: 20px;
+
+      padding: 6px 11px;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      margin-bottom: 12px;
+    }
+
+    .modal-content h2 {
+      font-size: 32px;
+
+      margin-bottom: 15px;
+
+      padding-right: 50px;
+    }
+
+    .modal-description {
+      color: #64748b;
+
+      font-size: 16px;
+
+      max-width: 850px;
+
+      margin-bottom: 28px;
+    }
+
+
+
+    /* PROJECT MEDIA */
+
+    .modal-media {
+      width: 100%;
+
+      background: #f8fafc;
+
+      border: 1px solid #e2e8f0;
+
+      border-radius: 12px;
+
+      padding: 12px;
+
+      margin-bottom: 30px;
+
+      text-align: center;
+    }
+
+    .modal-media img {
+      max-width: 100%;
+
+      max-height: 650px;
+
+      display: block;
+
+      margin: auto;
+
+      object-fit: contain;
+
+      border-radius: 8px;
+
+      cursor: zoom-in;
+    }
+
+    .media-help {
+      display: block;
+
+      margin-top: 8px;
+
+      color: #64748b;
+
+      font-size: 12px;
+    }
+
+
+
+    /* PDF */
+
+    .pdf-frame {
+      width: 100%;
+
+      height: 650px;
+
+      border: none;
+
+      border-radius: 8px;
+
+      background: white;
+    }
+
+
+
+    /* PROJECT DETAIL */
+
+    .modal-info-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.1fr 0.9fr;
+
+      gap: 25px;
+    }
+
+    .modal-info-box {
+      background: #f8fafc;
+
+      border: 1px solid #e2e8f0;
+
+      border-radius: 12px;
+
+      padding: 22px;
+    }
+
+    .modal-info-box h3 {
+      margin-bottom: 10px;
+
+      color: #0f172a;
+    }
+
+    .modal-info-box p {
+      color: #64748b;
+
+      font-size: 15px;
+    }
+
+    .modal-tools {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+    }
+
+    .modal-actions {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 28px;
+    }
+
+
+
+    /* ==================================================
+       IMAGE VIEWER
+    ================================================== */
+
+    .image-viewer {
+      position: fixed;
+
+      inset: 0;
+
+      background:
+        rgba(2,6,23,0.97);
+
+      z-index: 99999;
+
+      display: none;
+
+      flex-direction: column;
+    }
+
+    .image-viewer.active {
+      display: flex;
+    }
+
+    .viewer-toolbar {
+      display: flex;
+
+      justify-content: flex-end;
+
+      gap: 10px;
+
+      padding: 14px;
+
+      background: #0f172a;
+    }
+
+    .viewer-toolbar button {
+      background: #1e293b;
+
+      color: white;
+
+      border: 1px solid #475569;
+
+      padding: 9px 14px;
+
+      border-radius: 7px;
+
+      cursor: pointer;
+    }
+
+    .viewer-toolbar button:hover {
+      background: #2563eb;
+    }
+
+    .viewer-stage {
+      flex: 1;
+
+      overflow: auto;
+
+      padding: 25px;
+
+      display: flex;
+
+      align-items: flex-start;
+
+      justify-content: center;
+    }
+
+    .viewer-stage img {
+      display: block;
+
+      height: auto;
+
+      max-width: none;
+
+      border-radius: 8px;
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.5);
+    }
+
+
+
+    /* ==================================================
        CONTACT
-    ========================== */
+    ================================================== */
 
     .contact {
       background: white;
+
       text-align: center;
+
+      clear: both;
     }
 
     .contact-box {
       background: #0f172a;
+
       color: white;
+
       padding: 65px 30px;
+
       border-radius: 20px;
     }
 
@@ -502,58 +1067,93 @@
 
     .contact-box p {
       color: #cbd5e1;
+
       max-width: 620px;
+
       margin: 15px auto 30px;
     }
 
     .contact-links {
       display: flex;
+
       gap: 15px;
+
       justify-content: center;
+
       flex-wrap: wrap;
     }
 
 
-    /* =========================
+
+    /* ==================================================
        FOOTER
-    ========================== */
+    ================================================== */
 
     footer {
+      width: 100%;
+
       text-align: center;
+
       padding: 30px;
+
       color: #64748b;
+
       font-size: 14px;
-      border-top: 1px solid #e2e8f0;
+
+      border-top:
+        1px solid #e2e8f0;
+
       background: white;
+
+      clear: both;
     }
 
 
-    /* =========================
+
+    /* ==================================================
        RESPONSIVE
-    ========================== */
+    ================================================== */
 
     @media(max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
 
       .hero h1 {
         font-size: 48px;
       }
 
-      .credibility-grid {
+      .hero-profile {
+        order: 2;
+      }
+
+      .profile-frame {
+        max-width: 360px;
+      }
+
+      .credibility-grid,
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
       .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
       .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2,minmax(0,1fr));
       }
 
-      .about-grid {
+      .modal-info-grid {
         grid-template-columns: 1fr;
       }
+
     }
+
 
 
     @media(max-width: 650px) {
@@ -562,9 +1162,13 @@
         display: none;
       }
 
+      section {
+        padding: 65px 0;
+      }
+
       .hero {
         min-height: auto;
-        padding: 90px 0;
+        padding: 80px 0;
       }
 
       .hero h1 {
@@ -575,26 +1179,44 @@
         font-size: 19px;
       }
 
+      .profile-frame {
+        max-width: 300px;
+      }
+
       .credibility-content h2 {
         font-size: 31px;
       }
 
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
+      .stats,
       .skills-grid,
       .projects-grid {
         grid-template-columns: 1fr;
       }
 
-      section {
-        padding: 65px 0;
+      .project-modal {
+        padding: 10px;
       }
 
-      .project-image {
-        height: 200px;
+      .modal-dialog {
+        margin: 10px auto;
       }
+
+      .modal-content {
+        padding: 22px;
+      }
+
+      .modal-content h2 {
+        font-size: 26px;
+      }
+
+      .pdf-frame {
+        height: 520px;
+      }
+
+      .viewer-toolbar {
+        flex-wrap: wrap;
+      }
+
     }
 
   </style>
@@ -602,12 +1224,14 @@
 </head>
 
 
+
 <body>
 
 
-<!-- =========================
+
+<!-- ==================================================
      NAVIGATION
-========================== -->
+================================================== -->
 
 <nav>
 
@@ -620,8 +1244,11 @@
     <div class="nav-links">
 
       <a href="#about">About</a>
+
       <a href="#skills">Skills</a>
+
       <a href="#projects">Projects</a>
+
       <a href="#contact">Contact</a>
 
     </div>
@@ -632,44 +1259,101 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      HERO
-========================== -->
+================================================== -->
 
 <section class="hero">
 
   <div class="container">
 
-    <div class="hero-content">
+    <div class="hero-grid">
 
-      <span class="small-title">
-        DATA ANALYST PORTFOLIO
-      </span>
 
-      <h1>
-        Hi, I'm <span>Israt Jahan Chandmoni</span>
-      </h1>
+      <!-- HERO LEFT -->
 
-      <div class="hero-subtitle">
-        Freelance BI Analyst | Data Analyst | Power BI | SQL | Python | Tableau | Looker Studio
+      <div class="hero-content">
+
+        <span class="small-title">
+
+          DATA ANALYST PORTFOLIO
+
+        </span>
+
+
+        <h1>
+
+          Hi, I'm
+
+          <span>
+            Israt Jahan Chandmoni
+          </span>
+
+        </h1>
+
+
+        <div class="hero-subtitle">
+
+          Freelance BI Analyst |
+          Data Analyst |
+          Power BI |
+          SQL |
+          Python |
+          Tableau |
+          Looker Studio
+
+        </div>
+
+
+        <p class="hero-description">
+
+          I transform raw data into clear business insights
+          through interactive dashboards,
+          data analysis and visual storytelling.
+
+        </p>
+
+
+        <div class="buttons">
+
+
+          <a
+            href="#projects"
+            class="btn btn-primary"
+          >
+            View My Projects
+          </a>
+
+
+          <a
+            href="#contact"
+            class="btn btn-secondary"
+          >
+            Contact Me
+          </a>
+
+
+        </div>
+
       </div>
 
-      <p class="hero-description">
-        I transform raw data into clear business insights through
-        interactive dashboards, data analysis and visual storytelling.
-      </p>
 
-      <div class="buttons">
 
-        <a href="#projects" class="btn btn-primary">
-          View My Projects
-        </a>
+      <!-- HERO RIGHT PROFILE PHOTO -->
 
-        <a href="#contact" class="btn btn-secondary">
-          Contact Me
-        </a>
+      <div class="hero-profile">
+
+        <div class="profile-frame">
+
+          <img
+            src="profile.jpeg"
+            alt="Israt Jahan Chandmoni - Data Analyst"
+          >
+
+        </div>
 
       </div>
+
 
     </div>
 
@@ -679,9 +1363,9 @@
 
 
 
-<!-- =========================
-     UPWORK CREDIBILITY
-========================== -->
+<!-- ==================================================
+     UPWORK
+================================================== -->
 
 <section class="credibility">
 
@@ -703,22 +1387,35 @@
       <div class="credibility-content">
 
         <span class="credibility-label">
+
           PROFESSIONAL EXPERIENCE
+
         </span>
 
+
         <h2>
+
           🏆 Upwork Top Rated
+
         </h2>
 
+
         <p>
-          With 4 years of experience in data analytics, I help businesses
-          transform raw data into meaningful insights and better decisions.
-          I specialize in Power BI dashboards, SQL reporting, sales analysis,
-          inventory analytics, data cleaning and visualization.
+
+          With 4 years of experience in data analytics,
+          I help businesses transform raw data into
+          meaningful insights and better decisions.
+
+          I specialize in Power BI dashboards,
+          SQL reporting, sales analysis,
+          inventory analytics, data cleaning
+          and visualization.
+
         </p>
 
 
         <div class="stats">
+
 
           <div class="stat-card">
 
@@ -746,7 +1443,9 @@
 
           </div>
 
+
         </div>
+
 
       </div>
 
@@ -758,9 +1457,9 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      ABOUT
-========================== -->
+================================================== -->
 
 <section id="about" class="about">
 
@@ -768,33 +1467,53 @@
 
     <div class="about-grid">
 
+
       <div class="about-text">
 
-        <h2>About Me</h2>
+        <h2>
+          About Me
+        </h2>
+
 
         <p>
-          I am a Data Analyst focused on transforming complex data
-          into meaningful insights that support better business decisions.
+
+          I am a Data Analyst focused on transforming
+          complex data into meaningful insights that
+          support better business decisions.
+
         </p>
 
-        <p>
-          I create business dashboards, sales analysis reports,
-          inventory insights and data visualizations using tools
-          such as Power BI, SQL, Python, Tableau and Looker Studio.
-        </p>
 
         <p>
-          My goal is not only to create reports, but to help people
-          understand what is happening in their data, why it is
-          happening and what actions they can take next.
+
+          I create business dashboards,
+          sales analysis reports,
+          inventory insights and data visualizations
+          using Power BI, SQL, Python,
+          Tableau and Looker Studio.
+
+        </p>
+
+
+        <p>
+
+          My goal is not only to create reports,
+          but to help people understand what is
+          happening in their data,
+          why it is happening,
+          and what actions they can take next.
+
         </p>
 
       </div>
 
 
+
       <div class="about-box">
 
-        <h3>What I Work On</h3>
+        <h3>
+          What I Work On
+        </h3>
 
         <p>✓ Business Intelligence Dashboards</p>
 
@@ -810,6 +1529,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -818,19 +1538,23 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      SKILLS
-========================== -->
+================================================== -->
 
 <section id="skills">
 
   <div class="container">
 
-    <h2>Skills & Tools</h2>
+    <h2>
+      Skills & Tools
+    </h2>
 
     <p class="section-description">
+
       Tools and technologies I use to analyze data,
       create dashboards and communicate business insights.
+
     </p>
 
 
@@ -842,8 +1566,10 @@
         <h3>Power BI</h3>
 
         <p>
-          Interactive dashboards, data modeling,
-          Power Query, DAX and business reporting.
+          Interactive dashboards,
+          data modeling,
+          Power Query,
+          DAX and business reporting.
         </p>
 
       </div>
@@ -854,8 +1580,11 @@
         <h3>SQL</h3>
 
         <p>
-          Data extraction, filtering, joins,
-          aggregations and business reporting.
+          Data extraction,
+          filtering,
+          joins,
+          aggregations
+          and business reporting.
         </p>
 
       </div>
@@ -866,8 +1595,10 @@
         <h3>Python</h3>
 
         <p>
-          Data cleaning, transformation,
-          exploratory analysis and automation.
+          Data cleaning,
+          transformation,
+          exploratory analysis
+          and automation.
         </p>
 
       </div>
@@ -878,8 +1609,9 @@
         <h3>Data Visualization</h3>
 
         <p>
-          Power BI, Tableau and Looker Studio
-          dashboards for clear business insights.
+          Power BI,
+          Tableau and Looker Studio dashboards
+          for clear business insights.
         </p>
 
       </div>
@@ -893,354 +1625,43 @@
 
 
 
-<!-- =========================
-     PROJECTS
-========================== -->
+<!-- ==================================================
+     PROJECT GALLERY
+================================================== -->
 
 <section id="projects" class="projects">
 
   <div class="container">
 
-    <h2>Featured Projects</h2>
+    <h2>
+      Featured Projects
+    </h2>
+
 
     <p class="section-description">
-      Selected projects demonstrating my approach to
-      business analysis, dashboards and data-driven problem solving.
+
+      Explore selected analytics projects.
+      Open any project to view the complete analysis,
+      business value and technologies used.
+
     </p>
 
 
-    <div class="projects-grid">
+    <div
+      id="projectsGrid"
+      class="projects-grid"
+    ></div>
 
-
-      <!-- =========================
-           PROJECT 1
-           SHOPIFY E-COM DASHBOARD using Power BI
-      ========================== -->
-
-      <div class="project-card">
-
-        <div class="project-image has-image">
-
-  <img
-    src="Shopify E-com Dashboard.png"
-    alt="Shopify E-commerce Power BI Dashboard by Israt Jahan Chandmoni"
-    class="zoomable-image"
-    onclick="openLightbox(this.src, this.alt)"
-    title="Click to enlarge"
-  >
-
-</div>
-
-
-        <div class="project-content">
-
-          <h3>Shopify E-com Dashboard in Power BI</h3>
-
-          <p>
-            This Power BI dashboard provides an overview of Shopify
-            e-commerce performance, helping business owners monitor sales,
-            profitability, customer behavior, product performance,
-            shipping methods and refunds in one place.
-          </p>
-
-
-          <div class="project-business-value">
-
-            <strong>Business Value</strong>
-
-            <p>
-              This dashboard helps e-commerce businesses identify sales trends,
-              monitor profitability, understand customer purchasing behavior,
-              evaluate product demand, track refunds and make data-driven
-              decisions to improve overall business performance.
-            </p>
-
-          </div>
-
-
-          <div class="tools-title">
-            Tools & Technologies
-          </div>
-
-
-          <div class="tags">
-
-            <span class="tag">Shopify API</span>
-
-            <span class="tag">Google Sheets</span>
-
-            <span class="tag">Microsoft Power BI</span>
-
-            <span class="tag">Power Query</span>
-
-            <span class="tag">Data Modeling</span>
-
-            <span class="tag">E-commerce Analytics</span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-
-    <!-- =========================
-     PROJECT 2
-     FINANCIAL SALES ANALYSIS
-========================== -->
-
-<div class="project-card">
-
-  <div class="project-image has-image">
-
-    <img
-      src="Financial Sales.jpg"
-      alt="Financial Sales Analysis Power BI Dashboard by Israt Jahan Chandmoni"
-      class="zoomable-image"
-      onclick="openLightbox(this.src, this.alt)"
-      title="Click to enlarge"
-    >
 
   </div>
 
+</section>
 
-  <div class="project-content">
 
-    <h3>Financial Sales Analysis in Power BI</h3>
 
-    <p>
-      Interactive Power BI dashboard analyzing financial sales,
-      profit, discounts, monthly trends, products, countries,
-      and customer segments.
-    </p>
-
-
-    <div class="project-business-value">
-
-      <strong>Business Value</strong>
-
-      <p>
-        Helps businesses track sales and profit performance,
-        compare products and markets, identify trends,
-        and support better financial decisions.
-      </p>
-
-    </div>
-
-
-    <div class="tools-title">
-      Tools & Technologies
-    </div>
-
-
-    <div class="tags">
-
-      <span class="tag">Microsoft Power BI</span>
-
-      <span class="tag">Power Query</span>
-
-      <span class="tag">DAX</span>
-
-      <span class="tag">Data Modeling</span>
-
-      <span class="tag">Data Visualization</span>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-
-      <!-- =========================
-     PROJECT 3
-     PIZZA SALES ANALYSIS SQL
-========================== -->
-
-<div class="project-card">
-
-  <!-- PDF PREVIEW -->
-
-  <!-- PDF PREVIEW -->
-
-<div class="pdf-preview-wrapper">
-
-  <iframe
-    src="Pizza%20Sales%20Analysis%20by%20SQL_IJC.pdf#page=1&toolbar=0&navpanes=0"
-    class="pdf-preview"
-    title="Pizza Sales Analysis SQL Project Preview"
-  ></iframe>
-
-</div>
-
-<div class="pdf-preview-action">
-
-  <a
-    href="Pizza%20Sales%20Analysis%20by%20SQL_IJC.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    View Full Project PDF →
-  </a>
-
-</div>
-
-
-  <div class="project-content">
-
-    <h3>Pizza Sales Analysis in SQL</h3>
-
-    <p>
-      SQL-based pizza sales analysis covering total orders,
-      revenue, top-selling pizzas, order patterns,
-      and category performance.
-    </p>
-
-
-    <div class="project-business-value">
-
-      <strong>Business Value</strong>
-
-      <p>
-        Helps identify best-selling pizzas, peak ordering times,
-        revenue contribution, and sales trends to support better
-        product and sales decisions.
-      </p>
-
-    </div>
-
-
-    <div class="tools-title">
-      Tools & Technologies
-    </div>
-
-
-    <div class="tags">
-
-      <span class="tag">SQL</span>
-
-      <span class="tag">MySQL</span>
-
-      <span class="tag">CSV Data Import</span>
-
-      <span class="tag">Joins</span>
-
-      <span class="tag">Aggregations</span>
-
-      <span class="tag">Revenue Analysis</span>
-
-      <span class="tag">Canva Pro</span>
-
-    </div>
-
-
-    <a
-      href="Pizza%20Sales%20Analysis%20by%20SQL_IJC.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="project-link"
-    >
-      View Full Project PDF →
-    </a>
-
-  </div>
-
-</div>
-
-<!-- =========================
-     PROJECT 4
-     GOOGLE ADS X LOOKER STUDIO
-========================== -->
-
-<div class="project-card">
-
-  <!-- PROJECT IMAGE -->
-
-  <div class="project-image has-image">
-
-    <img
-      src="Google Ads report in Looker Studio.png"
-      alt="Google Ads Looker Studio Dashboard by Israt Jahan Chandmoni"
-      class="zoomable-image"
-      onclick="openLightbox(this.src, this.alt)"
-      title="Click to enlarge"
-    >
-
-  </div>
-
-
-  <div class="project-content">
-
-    <h3>Google Ads X Looker Studio Dashboard</h3>
-
-
-    <p>
-      Connected Google Ads data directly to Looker Studio
-      to create an interactive dashboard for monitoring campaign
-      performance, conversions, costs, CTR, CPC, and audience insights.
-    </p>
-
-
-    <!-- BUSINESS VALUE -->
-
-    <div class="project-business-value">
-
-      <strong>Business Value</strong>
-
-      <p>
-        Helps businesses monitor advertising performance,
-        identify high-performing campaigns, control acquisition
-        costs, and make faster data-driven marketing decisions.
-      </p>
-
-    </div>
-
-
-    <!-- TOOLS -->
-
-    <div class="tools-title">
-      Tools & Technologies
-    </div>
-
-
-    <div class="tags">
-
-      <span class="tag">Google Ads</span>
-
-      <span class="tag">Looker Studio</span>
-
-      <span class="tag">Google Ads Connector</span>
-
-      <span class="tag">Marketing Analytics</span>
-
-      <span class="tag">Data Visualization</span>
-
-      <span class="tag">KPI Reporting</span>
-
-    </div>
-
-
-    <!-- LIVE REPORT -->
-
-    <a
-      href="https://lookerstudio.google.com/reporting/1a476b27-ef57-4560-9db4-0205fb0a28ea"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="project-link"
-    >
-      View Live Dashboard →
-    </a>
-
-  </div>
-
-</div>
-
-      
-<!-- =========================
+<!-- ==================================================
      CONTACT
-========================== -->
+================================================== -->
 
 <section id="contact" class="contact">
 
@@ -1248,12 +1669,20 @@
 
     <div class="contact-box">
 
-      <h2>Let's Connect</h2>
+      <h2>
+        Let's Connect
+      </h2>
+
 
       <p>
-        I'm always interested in opportunities to work on
-        data analysis, business intelligence and dashboard projects.
+
+        I'm always interested in opportunities
+        to work on data analysis,
+        business intelligence
+        and dashboard projects.
+
       </p>
+
 
       <div class="contact-links">
 
@@ -1306,9 +1735,9 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      FOOTER
-========================== -->
+================================================== -->
 
 <footer>
 
@@ -1316,6 +1745,1101 @@
   Built with HTML & CSS and hosted on GitHub Pages.
 
 </footer>
+
+
+
+<!-- ==================================================
+     PROJECT MODAL
+================================================== -->
+
+<div
+  id="projectModal"
+  class="project-modal"
+  aria-hidden="true"
+>
+
+  <div class="modal-dialog">
+
+    <button
+      class="modal-close"
+      onclick="closeProjectModal()"
+      aria-label="Close project"
+    >
+      ✕
+    </button>
+
+
+    <div
+      id="modalContent"
+      class="modal-content"
+    ></div>
+
+
+  </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     IMAGE VIEWER
+================================================== -->
+
+<div
+  id="imageViewer"
+  class="image-viewer"
+>
+
+  <div class="viewer-toolbar">
+
+    <button onclick="zoomOut()">
+      − Zoom
+    </button>
+
+    <button onclick="resetZoom()">
+      Reset
+    </button>
+
+    <button onclick="zoomIn()">
+      + Zoom
+    </button>
+
+    <button onclick="closeImageViewer()">
+      ✕ Close
+    </button>
+
+  </div>
+
+
+  <div class="viewer-stage">
+
+    <img
+      id="viewerImage"
+      src=""
+      alt=""
+    >
+
+  </div>
+
+</div>
+
+
+
+<script>
+
+
+/* ==================================================
+   PROJECT DATABASE
+
+   FUTURE PROJECT:
+   COPY ONE OBJECT AND ADD IT BELOW.
+================================================== */
+
+
+const projects = [
+
+
+  /* PROJECT 1 */
+
+  {
+
+    id: "shopify",
+
+    title:
+      "Shopify E-com Dashboard in Power BI",
+
+    shortDescription:
+      "Power BI dashboard monitoring Shopify sales, profitability, customers, products, shipping and refunds.",
+
+    fullDescription:
+      "This Power BI dashboard provides an overview of Shopify e-commerce performance, helping business owners monitor sales, profitability, customer behavior, product performance, shipping methods and refunds in one place.",
+
+    businessValue:
+      "This dashboard helps e-commerce businesses identify sales trends, monitor profitability, understand customer purchasing behavior, evaluate product demand, track refunds and make data-driven decisions to improve overall business performance.",
+
+    type: "image",
+
+    media:
+      "Shopify E-com Dashboard.png",
+
+    tools: [
+      "Shopify API",
+      "Google Sheets",
+      "Microsoft Power BI",
+      "Power Query",
+      "Data Modeling",
+      "E-commerce Analytics"
+    ]
+
+  },
+
+
+
+  /* PROJECT 2 */
+
+  {
+
+    id:
+      "financial-sales",
+
+    title:
+      "Financial Sales Analysis in Power BI",
+
+    shortDescription:
+      "Interactive Power BI dashboard analyzing sales, profit, discounts, monthly trends, products and markets.",
+
+    fullDescription:
+      "Interactive Power BI dashboard analyzing financial sales, profit, discounts, monthly trends, products, countries and customer segments.",
+
+    businessValue:
+      "Helps businesses track sales and profit performance, compare products and markets, identify trends and support better financial decisions.",
+
+    type:
+      "image",
+
+    media:
+      "Financial Sales.jpg",
+
+    tools: [
+      "Microsoft Power BI",
+      "Power Query",
+      "DAX",
+      "Data Modeling",
+      "Data Visualization"
+    ]
+
+  },
+
+
+
+  /* PROJECT 3 */
+
+  {
+
+    id:
+      "pizza-sql",
+
+    title:
+      "Pizza Sales Analysis in SQL",
+
+    shortDescription:
+      "SQL analysis covering orders, revenue, top-selling pizzas, order patterns and category performance.",
+
+    fullDescription:
+      "SQL-based pizza sales analysis covering total orders, revenue, top-selling pizzas, order patterns and category performance.",
+
+    businessValue:
+      "Helps identify best-selling pizzas, peak ordering times, revenue contribution and sales trends to support better product and sales decisions.",
+
+    type:
+      "pdf",
+
+    media:
+      "Pizza Sales Analysis by SQL_IJC.pdf",
+
+    tools: [
+      "SQL",
+      "MySQL",
+      "CSV Data Import",
+      "Joins",
+      "Aggregations",
+      "Revenue Analysis",
+      "Canva Pro"
+    ],
+
+    externalLink:
+      "Pizza Sales Analysis by SQL_IJC.pdf",
+
+    externalLabel:
+      "Open Full PDF"
+
+  },
+
+
+
+  /* PROJECT 4 */
+
+  {
+
+    id:
+      "google-ads-looker",
+
+    title:
+      "Google Ads X Looker Studio Dashboard",
+
+    shortDescription:
+      "Google Ads data connected to Looker Studio for campaign performance and KPI reporting.",
+
+    fullDescription:
+      "Connected Google Ads data directly to Looker Studio to create an interactive dashboard for monitoring campaign performance, conversions, costs, CTR, CPC and audience insights.",
+
+    businessValue:
+      "Helps businesses monitor advertising performance, identify high-performing campaigns, control acquisition costs and make faster data-driven marketing decisions.",
+
+    type:
+      "image",
+
+    media:
+      "Google Ads report in Looker Studio.png",
+
+    tools: [
+      "Google Ads",
+      "Looker Studio",
+      "Google Ads Connector",
+      "Marketing Analytics",
+      "Data Visualization",
+      "KPI Reporting"
+    ],
+
+    externalLink:
+      "https://lookerstudio.google.com/reporting/1a476b27-ef57-4560-9db4-0205fb0a28ea",
+
+    externalLabel:
+      "Open Live Dashboard"
+
+  }
+
+
+];
+
+
+
+/* ==================================================
+   RENDER PROJECTS
+================================================== */
+
+
+function renderProjects() {
+
+  const grid =
+    document.getElementById(
+      "projectsGrid"
+    );
+
+
+  grid.innerHTML =
+    projects.map(project => {
+
+
+      let thumbnail;
+
+
+      if (
+        project.type === "image"
+      ) {
+
+        thumbnail = `
+
+          <a
+            href="#project-${project.id}"
+            class="project-thumb"
+            aria-label="View ${project.title}"
+          >
+
+            <img
+              src="${encodeURI(project.media)}"
+              alt="${project.title}"
+            >
+
+          </a>
+
+        `;
+
+      }
+
+
+      else {
+
+        thumbnail = `
+
+          <a
+            href="#project-${project.id}"
+            class="project-thumb sql-cover"
+            aria-label="View ${project.title}"
+          >
+
+            <span>
+              SQL PROJECT
+            </span>
+
+            <strong>
+              Pizza Sales Analysis
+            </strong>
+
+            <small>
+              SQL • MySQL • Business Analysis
+            </small>
+
+          </a>
+
+        `;
+
+      }
+
+
+
+      const galleryTools =
+        project.tools
+          .slice(0,3)
+          .map(
+            tool =>
+              `<span class="tag">${tool}</span>`
+          )
+          .join("");
+
+
+
+      return `
+
+        <article class="project-card">
+
+          ${thumbnail}
+
+
+          <div class="project-card-content">
+
+            <h3>
+              ${project.title}
+            </h3>
+
+
+            <p class="project-summary">
+
+              ${project.shortDescription}
+
+            </p>
+
+
+            <div class="gallery-tags">
+
+              ${galleryTools}
+
+            </div>
+
+
+            <a
+              href="#project-${project.id}"
+              class="project-button"
+            >
+
+              View Full Project →
+
+            </a>
+
+
+          </div>
+
+        </article>
+
+      `;
+
+
+    }).join("");
+
+}
+
+
+
+/* ==================================================
+   OPEN PROJECT
+================================================== */
+
+
+function openProject(project) {
+
+  const modal =
+    document.getElementById(
+      "projectModal"
+    );
+
+  const modalContent =
+    document.getElementById(
+      "modalContent"
+    );
+
+
+  let mediaHTML;
+
+
+
+  if (
+    project.type === "image"
+  ) {
+
+    mediaHTML = `
+
+      <div class="modal-media">
+
+        <img
+          src="${encodeURI(project.media)}"
+          alt="${project.title}"
+          onclick="openImageViewer(
+            '${encodeURI(project.media)}',
+            '${project.title.replace(/'/g, "\\'")}'
+          )"
+        >
+
+        <span class="media-help">
+
+          Click the dashboard image to enlarge
+
+        </span>
+
+      </div>
+
+    `;
+
+  }
+
+
+  else {
+
+    mediaHTML = `
+
+      <div class="modal-media">
+
+        <iframe
+          src="${encodeURI(project.media)}#page=1"
+          class="pdf-frame"
+          title="${project.title}"
+        ></iframe>
+
+      </div>
+
+    `;
+
+  }
+
+
+
+  const toolsHTML =
+    project.tools
+      .map(
+        tool =>
+          `<span class="tag">${tool}</span>`
+      )
+      .join("");
+
+
+
+  let externalButton = "";
+
+
+  if (
+    project.externalLink
+  ) {
+
+    externalButton = `
+
+      <a
+        href="${encodeURI(project.externalLink)}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary"
+      >
+
+        ${
+          project.externalLabel ||
+          "Open Project"
+        }
+
+      </a>
+
+    `;
+
+  }
+
+
+  else if (
+    project.type === "image"
+  ) {
+
+    externalButton = `
+
+      <a
+        href="${encodeURI(project.media)}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary"
+      >
+
+        Open Full-Size Dashboard
+
+      </a>
+
+    `;
+
+  }
+
+
+
+  modalContent.innerHTML = `
+
+    <span class="modal-project-label">
+
+      FEATURED PROJECT
+
+    </span>
+
+
+    <h2>
+
+      ${project.title}
+
+    </h2>
+
+
+    <p class="modal-description">
+
+      ${project.fullDescription}
+
+    </p>
+
+
+    ${mediaHTML}
+
+
+    <div class="modal-info-grid">
+
+
+      <div class="modal-info-box">
+
+        <h3>
+          Business Value
+        </h3>
+
+        <p>
+          ${project.businessValue}
+        </p>
+
+      </div>
+
+
+      <div class="modal-info-box">
+
+        <h3>
+          Tools & Technologies
+        </h3>
+
+
+        <div class="modal-tools">
+
+          ${toolsHTML}
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="modal-actions">
+
+
+      ${externalButton}
+
+
+      <button
+        class="btn btn-secondary"
+        onclick="copyProjectLink(
+          '${project.id}',
+          this
+        )"
+      >
+
+        Copy Project Link
+
+      </button>
+
+
+    </div>
+
+  `;
+
+
+
+  modal.classList.add(
+    "active"
+  );
+
+
+  modal.setAttribute(
+    "aria-hidden",
+    "false"
+  );
+
+
+  document.body.classList.add(
+    "modal-open"
+  );
+
+
+  document.title =
+
+    project.title +
+
+    " | Israt Jahan Chandmoni";
+
+}
+
+
+
+/* ==================================================
+   CLOSE PROJECT
+================================================== */
+
+
+function closeProjectModal(
+  changeHash = true
+) {
+
+  const modal =
+    document.getElementById(
+      "projectModal"
+    );
+
+
+  modal.classList.remove(
+    "active"
+  );
+
+
+  modal.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+
+  document.body.classList.remove(
+    "modal-open"
+  );
+
+
+  document.title =
+    "Israt Jahan Chandmoni | Data Analyst";
+
+
+  if (
+    changeHash
+  ) {
+
+    history.pushState(
+      null,
+      "",
+      "#projects"
+    );
+
+  }
+
+}
+
+
+
+/* ==================================================
+   SHAREABLE PROJECT LINKS
+================================================== */
+
+
+function checkProjectHash() {
+
+  const hash =
+    window.location.hash;
+
+
+  if (
+    hash.startsWith(
+      "#project-"
+    )
+  ) {
+
+    const id =
+      hash.replace(
+        "#project-",
+        ""
+      );
+
+
+    const project =
+      projects.find(
+        item =>
+          item.id === id
+      );
+
+
+    if (
+      project
+    ) {
+
+      openProject(
+        project
+      );
+
+      return;
+
+    }
+
+  }
+
+
+  const modal =
+    document.getElementById(
+      "projectModal"
+    );
+
+
+  if (
+    modal.classList.contains(
+      "active"
+    )
+  ) {
+
+    closeProjectModal(
+      false
+    );
+
+  }
+
+}
+
+
+
+window.addEventListener(
+  "hashchange",
+  checkProjectHash
+);
+
+
+
+/* ==================================================
+   COPY PROJECT LINK
+================================================== */
+
+
+async function copyProjectLink(
+  projectId,
+  button
+) {
+
+  const projectURL =
+
+    window.location.origin +
+
+    window.location.pathname +
+
+    "#project-" +
+
+    projectId;
+
+
+  try {
+
+    await navigator.clipboard.writeText(
+      projectURL
+    );
+
+
+    const originalText =
+      button.innerText;
+
+
+    button.innerText =
+      "Link Copied ✓";
+
+
+    setTimeout(
+      () => {
+
+        button.innerText =
+          originalText;
+
+      },
+      1800
+    );
+
+
+  }
+
+
+  catch(error) {
+
+    const textArea =
+      document.createElement(
+        "textarea"
+      );
+
+
+    textArea.value =
+      projectURL;
+
+
+    document.body.appendChild(
+      textArea
+    );
+
+
+    textArea.select();
+
+
+    document.execCommand(
+      "copy"
+    );
+
+
+    textArea.remove();
+
+
+    button.innerText =
+      "Link Copied ✓";
+
+  }
+
+}
+
+
+
+/* ==================================================
+   IMAGE VIEWER
+================================================== */
+
+
+let imageZoom = 1;
+
+let imageBaseWidth = 0;
+
+
+
+function openImageViewer(
+  src,
+  alt
+) {
+
+  const viewer =
+    document.getElementById(
+      "imageViewer"
+    );
+
+  const image =
+    document.getElementById(
+      "viewerImage"
+    );
+
+
+  image.src =
+    src;
+
+
+  image.alt =
+    alt;
+
+
+  viewer.classList.add(
+    "active"
+  );
+
+
+  image.onload =
+    function() {
+
+      imageZoom = 1;
+
+
+      imageBaseWidth =
+        Math.min(
+
+          image.naturalWidth,
+
+          window.innerWidth *
+          0.90
+
+        );
+
+
+      image.style.width =
+        imageBaseWidth +
+        "px";
+
+    };
+
+}
+
+
+
+function zoomIn() {
+
+  if (
+    imageZoom < 3
+  ) {
+
+    imageZoom +=
+      0.25;
+
+    updateImageZoom();
+
+  }
+
+}
+
+
+
+function zoomOut() {
+
+  if (
+    imageZoom > 0.5
+  ) {
+
+    imageZoom -=
+      0.25;
+
+    updateImageZoom();
+
+  }
+
+}
+
+
+
+function resetZoom() {
+
+  imageZoom = 1;
+
+  updateImageZoom();
+
+}
+
+
+
+function updateImageZoom() {
+
+  const image =
+    document.getElementById(
+      "viewerImage"
+    );
+
+
+  image.style.width =
+
+    (
+      imageBaseWidth *
+      imageZoom
+    )
+
+    + "px";
+
+}
+
+
+
+function closeImageViewer() {
+
+  document
+    .getElementById(
+      "imageViewer"
+    )
+    .classList
+    .remove(
+      "active"
+    );
+
+}
+
+
+
+/* ==================================================
+   ESC KEY
+================================================== */
+
+
+document.addEventListener(
+  "keydown",
+  function(event) {
+
+    if (
+      event.key ===
+      "Escape"
+    ) {
+
+
+      const viewer =
+        document.getElementById(
+          "imageViewer"
+        );
+
+
+      if (
+        viewer.classList.contains(
+          "active"
+        )
+      ) {
+
+        closeImageViewer();
+
+        return;
+
+      }
+
+
+      const modal =
+        document.getElementById(
+          "projectModal"
+        );
+
+
+      if (
+        modal.classList.contains(
+          "active"
+        )
+      ) {
+
+        closeProjectModal();
+
+      }
+
+    }
+
+  }
+);
+
+
+
+/* ==================================================
+   CLICK OUTSIDE PROJECT
+================================================== */
+
+
+document
+  .getElementById(
+    "projectModal"
+  )
+  .addEventListener(
+    "click",
+    function(event) {
+
+      if (
+        event.target ===
+        this
+      ) {
+
+        closeProjectModal();
+
+      }
+
+    }
+  );
+
+
+
+/* ==================================================
+   START WEBSITE
+================================================== */
+
+
+renderProjects();
+
+checkProjectHash();
+
+
+</script>
 
 
 </body>
